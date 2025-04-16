@@ -35,6 +35,17 @@ Dopo aver raccolto ed elaborato i dati, e’ il momento di mostrare i risultati 
 
 */
 
+function jobSearch() {
+  let job = document.getElementById("job-search-bar");
+  let location = document.getElementById("location-search-bar");
+  job = job.value;
+  location = location.value;
+  console.log(job, location);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", jobSearch);
+
 // NON MODIFICARE QUESTO ARRAY!
 const jobs = [
   { title: "Marketing Intern", location: "US, NY, New York" },

@@ -10,49 +10,16 @@
     <title>Job Finder</title>
   </head>
   <body>
-    <div id="sidebar">
-      <div>
-        <i class="fa-solid fa-house"></i>
-        <p>Home</p>
-      </div>
-      <div>
-        <i class="fa-solid fa-lock"></i>
-        <p>Jobs</p>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Find your next job.."
-            id="job-search-bar"
-          />
-        </form>
-      </div>
-      <div>
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Location</p>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Insert the location.."
-            id="location-search-bar"
-          />
-        </form>
-      </div>
-      <div>
-        <form action=""><input type="submit" value="Search" /></form>
-      </div>
-    </div>
-
-    <div id="topbar">
-      <div><img src="" alt="website-logo" /></div>
-      <div id="topbar-icons">
-        <div>icon</div>
-        <div>icon</div>
-        <div>icon</div>
-      </div>
-    </div>
-
-    <div id="content">
-      <div><h1>Looking for a job? Make the best of our search engine</h1></div>
+    <div>
+      <form id="search-form">
+        <input type="search" placeholder="Find a job.." id="job-search-bar" />
+        <input
+          type="search"
+          placeholder="Insert a location.."
+          id="location-search-bar"
+        />
+        <input type="submit" value="Search" />
+      </form>
     </div>
   </body>
 </html>
