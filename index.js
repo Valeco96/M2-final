@@ -36,10 +36,15 @@ Dopo aver raccolto ed elaborato i dati, e’ il momento di mostrare i risultati 
 */
 
 function jobSearch() {
-    event.preventDefault();
+  event.preventDefault();
   let job = document.getElementById("job-search-bar").value;
   let location = document.getElementById("location-search-bar").value;
   console.log(job, location);
+  for (let i = 0; i < jobs.length; i++) {
+    if (jobs[i].title.toLowerCase().includes(job)) {
+      console.log(jobs[i]);
+    }
+  }
 }
 
 //let searchForm = document.querySelector("#search-form");
