@@ -36,15 +36,14 @@ Dopo aver raccolto ed elaborato i dati, e’ il momento di mostrare i risultati 
 */
 
 function jobSearch() {
-  let job = document.getElementById("job-search-bar");
-  let location = document.getElementById("location-search-bar");
-  job = job.value;
-  location = location.value;
+    event.preventDefault();
+  let job = document.getElementById("job-search-bar").value;
+  let location = document.getElementById("location-search-bar").value;
   console.log(job, location);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", jobSearch);
+//let searchForm = document.querySelector("#search-form");
+//searchForm.addEventListener("submit", jobSearch);
 
 // NON MODIFICARE QUESTO ARRAY!
 const jobs = [
