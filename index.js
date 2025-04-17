@@ -52,7 +52,10 @@ function jobSearch() {
       result.push(jobs[i]);
     }
   }
-  console.log(result);
+  for (let i = 0; i < length; i++) {
+    result[i];
+  }
+  console.log(result, result.length);
 }
 
 //let searchForm = document.querySelector("#search-form");
