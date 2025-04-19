@@ -1,0 +1,18 @@
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#side-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 105px;
+}
+
+form {
+  text-align: center;
+}

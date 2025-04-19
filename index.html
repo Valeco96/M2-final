@@ -8,10 +8,21 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
     <title>Job Finder</title>
   </head>
   <body>
+    <div id="top-bar">
+      <h3>Jobs4You</h3>
+      <div id="side-icons">
+        <p>About us</p>
+        <p>Create account</p>
+        <p>Log in</p>
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </div>
     <div>
+      <h1>Start searching for your next career now!</h1>
       <form id="search-form">
         <input type="search" placeholder="Find a job.." id="job-search-bar" />
         <input
@@ -19,7 +30,8 @@
           placeholder="Insert a location.."
           id="location-search-bar"
         />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search" onclick="jobSearch()" />
+        <input type="button" value="Clean Search" />
       </form>
     </div>
     <div><p id="results"></p></div>
