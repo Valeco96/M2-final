@@ -35,7 +35,42 @@ Dopo aver raccolto ed elaborato i dati, e’ il momento di mostrare i risultati 
 
 */
 
-function jobSearch() {
+//Crea una funzione che prenda i parametri dall'array esistente. Crea le variabili per il risultato e il conteggio
+
+function jobSearch(array) {
+  event.preventDefault();
+  const count = 0;
+  let results = [];
+
+  //Prendi gli elementi da HTML e selezionali con querySelector. Fai si che vengano sempre rilevati con caratteri minuscoli con lowercase, e usa trim per lo spazio che l'utente potrebbe inserire
+  let jobInput = document.getElementById("job-search-bar").value;
+  let locationInput = document.getElementById("location-search-bar").value;
+  jobInput = jobInput.toLowerCase().trim();
+  locationInput = locationInput.toLowerCase().trim();
+  console.log(jobInput, locationInput);
+
+  //Filtra i lavori che corrispondono ai criteri di ricerca
+  for (let i = 0; i < jobs.length; i++) {
+    if (
+      jobs[i].title.includes(jobInput) &&
+      jobs[i].location.includes(locationInput)
+    ) {
+      results.push(jobs[i]);
+      return jobInput && locationInput;
+    }
+    console.log(results);
+  }
+}
+
+//let searchForm = document.getElementById("search-form");
+//searchForm.addEventListener("input", jobSearch());
+
+//Check criteri di job e location, se il filtro avviene sia per uno che per l'altro
+//Mostra i risultati e il conteggio
+//Crea funzione per svuotare entrambe le barre di ricerca
+//Aggiungi evento quando viene cliccato il pulsante cerca
+
+/*function jobSearch() {
   event.preventDefault();
   let job = document.getElementById("job-search-bar").value;
   let location = document.getElementById("location-search-bar").value;
@@ -56,7 +91,7 @@ function jobSearch() {
     result[i];
   }
   console.log(result, result.length);
-}
+}*/
 
 //let searchForm = document.querySelector("#search-form");
 //searchForm.addEventListener("submit", jobSearch);
