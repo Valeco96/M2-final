@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-image: url("images/job-bk4.avif");
+  background-image: url("images/job-bk7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -52,6 +52,7 @@ h1 {
   margin-top: 195px;
   font-size: 44px;
   color: #134165;
+  margin-bottom: 14px;
 }
 
 h4 {
@@ -64,4 +65,30 @@ h4 {
 
 form {
   text-align: center;
+  padding: 10px 30px;
+  margin: 15px 0;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  margin-inline: 200px;
+}
+
+.search-bar {
+  padding: 15px;
+  border: 1px solid #134165;
+  border-radius: 30px;
+  width: 35%;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(55, 4, 103);
+}
+
+.submit-btn {
+  margin-left: 10px;
+  background: #134165;
+  color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  padding: 14px 24px;
 }

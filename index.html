@@ -37,18 +37,29 @@
       <div id="main">
         <h1>Start searching for your next career now!</h1>
         <form id="search-form">
-          <input type="search" placeholder="Find a job.." id="job-search-bar" />
+          <input
+            type="search"
+            placeholder="Find a job.."
+            id="job-search-bar"
+            class="search-bar"
+          />
           <input
             type="search"
             placeholder="Insert a location.."
             id="location-search-bar"
+            class="search-bar"
           />
-          <input type="submit" value="Search" />
-          <input type="button" value="Clean Search" id="clean-search" />
+          <input type="submit" value="Search" class="submit-btn" />
+          <input
+            type="button"
+            value="Clean Search"
+            id="clean-search"
+            class="submit-btn"
+          />
         </form>
       </div>
 
-      <div><p id="results"></p></div>
+      <div class="results hidden" id="results"></div>
     </div>
 
     <script src="index.js"></script>
