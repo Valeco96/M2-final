@@ -146,16 +146,15 @@ function jobSearch() {
 
   filterJobs.forEach((job) => {
     results.push(job);
+    count = results.length;
   });
 
   //Mostra i risultati e il conteggio
-  console.log(results);
+  console.log(results, count);
 }
 
 //let searchForm = document.querySelector("#search-form");
 //searchForm.addEventListener("submit", jobSearch(jobs));
-
-
 
 //Crea funzione per svuotare entrambe le barre di ricerca
 //Aggiungi evento quando viene cliccato il pulsante cerca
