@@ -153,34 +153,17 @@ function jobSearch() {
   console.log(results, count);
 }
 
-//let searchForm = document.querySelector("#search-form");
-//searchForm.addEventListener("submit", jobSearch(jobs));
+//Aggiungi evento quando viene cliccato il pulsante cerca
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", jobSearch);
 
 //Crea funzione per svuotare entrambe le barre di ricerca
-//Aggiungi evento quando viene cliccato il pulsante cerca
+function clearSearchBar() {
+  let jobInput = document.getElementById("job-search-bar");
+  jobInput.value = "";
+  let locationInput = document.getElementById("location-search-bar");
+  locationInput.value = "";
+}
 
-/*function jobSearch() {
-  event.preventDefault();
-  let job = document.getElementById("job-search-bar").value;
-  let location = document.getElementById("location-search-bar").value;
-  console.log(job, location);
-  let result = [];
-  let count = result.length;
-  for (let i = 0; i < jobs.length; i++) {
-    if (jobs[i].title.toLowerCase().includes(job)) {
-      result.push(jobs[i]);
-    }
-  }
-  for (let i = 0; i < jobs.length; i++) {
-    if (jobs[i].location.toLowerCase().includes(location)) {
-      result.push(jobs[i]);
-    }
-  }
-  for (let i = 0; i < length; i++) {
-    result[i];
-  }
-  console.log(result, result.length);
-}*/
-
-//let searchForm = document.querySelector("#search-form");
-//searchForm.addEventListener("submit", jobSearch);
+let cleanBar = document.querySelector("#clean-search");
+cleanBar.addEventListener("click", clearSearchBar);
