@@ -124,7 +124,7 @@ const jobs = [
 
 //Crea una funzione che prenda i parametri dall'array esistente. Crea le variabili per il risultato e il conteggio
 
-function jobSearch(title, location) {
+function jobSearch() {
   event.preventDefault();
   let count = 0;
   let results = [];
@@ -144,16 +144,18 @@ function jobSearch(title, location) {
     return jobCategory.includes(jobInput) && jobPlace.includes(locationInput);
   });
 
-  console.log(filterJobs);
-  
+  filterJobs.forEach((job) => {
+    results.push(job);
+  });
+
   //Mostra i risultati e il conteggio
- 
+  console.log(results);
 }
 
 //let searchForm = document.querySelector("#search-form");
 //searchForm.addEventListener("submit", jobSearch(jobs));
 
-//Check criteri di job e location, se il filtro avviene sia per uno che per l'altro
+
 
 //Crea funzione per svuotare entrambe le barre di ricerca
 //Aggiungi evento quando viene cliccato il pulsante cerca
