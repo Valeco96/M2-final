@@ -92,3 +92,14 @@ form {
   border-radius: 15px;
   padding: 14px 24px;
 }
+
+.results {
+  font-size: 14px;
+  background-color: whitesmoke;
+  padding: 20px;
+  line-height: 2;
+  border-left: 3px solid #134165;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px 0 rgba(39, 33, 66, 0.2);
+  margin-inline: 200px;
+}
