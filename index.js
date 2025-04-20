@@ -151,6 +151,26 @@ function jobSearch() {
 
   //Mostra i risultati e il conteggio
   console.log(results, count);
+
+  //Mostra i risultati di ricerca sullo schermo quando la ricerca viene effettuata. Se non ce ne sono mostra "Nessun risultato"
+  let resultList = document.getElementById("results");
+  resultList.classList.remove("hidden");
+  //prima svuota l'HTML
+  resultList.innerHTML = "";
+  if (resultList === 0) {
+    resultList.innerHTML = "<li> Nessun risultato trovato. </li>";
+  } else {
+    //Aggiungi il titolo dei risultati (appare una sola volta)
+    resultList.innerHTML += `<h3 class="job-results">Results(${count})</h3>`;
+    //Aggungi risultato come li per ogni voce
+    results.forEach((job) => {
+      resultList.innerHTML += `
+      <li class="job-results">
+        <strong>${job.title}</strong>- ${job.location}
+      </li>
+    `;
+    });
+  }
 }
 
 //Aggiungi evento quando viene cliccato il pulsante cerca
@@ -163,6 +183,8 @@ function clearSearchBar() {
   jobInput.value = "";
   let locationInput = document.getElementById("location-search-bar");
   locationInput.value = "";
+  let resultList = document.getElementById("results");
+  resultList.classList.add("hidden");
 }
 
 let cleanBar = document.querySelector("#clean-search");
